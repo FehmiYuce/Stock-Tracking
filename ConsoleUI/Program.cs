@@ -9,13 +9,13 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        EfProductDal efProductDal= new EfProductDal();
+        /*EfProductDal efProductDal= new EfProductDal();
         Product product = new Product();
         product.ProductId = 1;
         product.CategoryId = 1;
         product.BrandId = 1;
         product.ProductName = "Mouse";
-        product.Barcode = "454543";
+        product.Barcode = "454543";*/
 
         //ProductManager productManager = new ProductManager(new EfProductDal());
         //foreach (var product in productManager.GetAll())
