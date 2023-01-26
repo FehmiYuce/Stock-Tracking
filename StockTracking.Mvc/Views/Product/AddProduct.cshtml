@@ -1,0 +1,84 @@
+﻿@model Entities.Concrete.Product
+
+@{
+    Layout = null;
+}
+
+@*<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.css"/>
+*@
+<head>
+    <meta name="viewport" content="widht=device-widht" />
+    <title>Add Product</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.css" />
+
+</head>
+
+
+
+
+<h1>Add new product page</h1>
+
+<br/>
+@using (Html.BeginForm("AddProduct","Product",FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Product Name")
+        @Html.TextBoxFor(x=>x.ProductName)
+        @Html.ValidationMessageFor(x=>x.ProductName)
+        <br/> <br/>
+        @Html.Label("Supplier ID")
+        @Html.TextBoxFor(x=>x.SupplierId)
+        <br /> <br />
+        @Html.Label("Category ID")
+        @Html.TextBoxFor(x=>x.CategoryId)
+        <br/> <br/>
+        @Html.Label("Brand ID")
+        @Html.TextBoxFor(x=>x.BrandId)
+        <br /> <br />
+        @Html.Label("Barcode")
+        @Html.TextBoxFor(x=>x.Barcode)
+        @Html.ValidationMessageFor(x=>x.Barcode)
+        <br /> <br />
+        @Html.Label("Unit Price")
+        @Html.TextBoxFor(x=>x.UnitPrice)
+        @Html.ValidationMessageFor(x=>x.UnitPrice)
+        <br /> <br />
+        @Html.Label("Units in Stock")
+        @Html.TextBoxFor(x=>x.UnitInStock)
+        <br /> <br />
+        @Html.Label("Units in Order")
+        @Html.TextBoxFor(x=>x.UnitsInOrder)
+        <br /> <br />
+        <button>Add</button>
+    </div>
+}
+
+
+@*<form class="form-group" method="post">
+    <input type="text" placeholder="Product Name" name="ProductName" class="form-control"></input>
+    <br />
+    <input type="text" placeholder="Supplier ID" name="SupplierId" class="form-control"></input>
+    <br />
+    <input type="text" placeholder="Category ID" name="CategoryId" class="form-control"></input>
+    <br />
+    <input type="text" placeholder="Brand ID" name="BrandId" class="form-control"></input>
+    <br />
+    <input type="text" placeholder="Barcode" name="Barcode" class="form-control"></input>
+    <br />
+    <input type="text" placeholder="Unit Price" name="UnitPrice" class="form-control"></input>
+    <br />
+    <input type="text" placeholder="Units in Stock" name="UnitInStock" class="form-control"></input>
+    <br />
+    <input type="text" placeholder="Units in Order" name="UnitsInOrder" class="form-control"></input>
+    <br />
+    <button class="btn-success">Add</button>
+</form>*@
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+

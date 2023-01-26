@@ -32,7 +32,7 @@ public class Program
             Barcode = "1651",
             BrandId = 1,
         });*/
-
+        
 
     }
 }

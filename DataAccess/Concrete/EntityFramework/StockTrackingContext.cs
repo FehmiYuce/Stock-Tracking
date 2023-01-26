@@ -8,18 +8,24 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    //Database tablolaro ile proje classlarını bağlama
+    //Database tablolar ile proje classlarını bağlama
 
     public class StockTrackingContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=StockTracking;Trusted_Connection=True");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=StockTracking1;integrated security=True");
             //Connect Timeout=30;MultipleActiveResultSets=True;
 
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Region> Regions { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Territory> Territories { get; set; }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsbuilder)
         //{

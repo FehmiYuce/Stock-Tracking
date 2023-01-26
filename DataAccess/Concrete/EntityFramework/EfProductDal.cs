@@ -40,6 +40,8 @@ namespace DataAccess.Concrete.EntityFramework
                                 ProductName = p.ProductName,
                                 CategoryName = c.CategoryName,
                                 Barcode = p.Barcode,
+                                UnitPrice= p.UnitPrice,
+                                UnitInStock= p.UnitInStock,
                             };
                 return (ICollection<Product>)query.ToList();
             }

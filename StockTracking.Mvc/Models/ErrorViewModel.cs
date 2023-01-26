@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace StockTracking.Mvc.Models
 {
     public class ErrorViewModel

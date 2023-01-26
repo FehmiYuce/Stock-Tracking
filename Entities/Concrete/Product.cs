@@ -10,7 +10,7 @@ namespace Entities.Concrete
 {
     public class Product : IEntity
     {
-        [Required]
+        [Key]
         public int ProductId { get; set; }
         public string? ProductName { get; set; }
         public int SupplierId { get; set; }

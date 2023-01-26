@@ -13,7 +13,10 @@ namespace Entities.DTOs
         [DisplayName("Ürün İsmi")]
         public string? ProductName { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(50)]//bunları modelde vereceğim
         public string? Barcode { get; set;}
+        public int UnitPrice { get; set; }
+        public int UnitInStock { get; set; }
+        public int UnitsInOrder { get; set; }
     }
 }

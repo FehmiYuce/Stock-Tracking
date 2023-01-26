@@ -1,0 +1,74 @@
+﻿@*@model StockTracking.Mvc.Models.ProductModel*@
+@using Entities.Concrete
+@model List<Entities.Concrete.Product>
+
+@{
+    Layout = null;
+}
+
+ <head>
+        <meta name="viewport" content="widht=device-widht"/>
+        <title>Products</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.css"/>
+
+ </head>
+
+
+<h3>Product Table</h3>
+<br>
+<table class="table table-bordered">
+    <tr>
+        <th>Product Name </th>
+        <th>Supplier Id</th>
+        <th>Category Id</th>
+        <th>Brand Id</th>
+        <th>Barcode </th>
+        <th>Unit Price </th>
+        <th>Units in Stock </th>
+        <th>Units in Order </th> 
+    </tr>
+    @*<tr>
+        <td>1</td>
+        <td>Mouse</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>24527827</td>
+        <td>100$</td>
+        <td>1000</td>
+        <td>50</td>
+        <td><button class="btn btn-success">Update</td>
+        <td><button class="btn btn-warning">Delete</td>
+    <tr>*@
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.SupplierId</td>
+                <td>@item.CategoryId</td>
+                <td>@item.BrandId</td>
+                <td>@item.Barcode</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitInStock</td>
+                <td>@item.UnitsInOrder</td>
+                <td><button class="btn btn-success">Update</td>
+                <td><button class="btn btn-warning">Delete</td>
+            </tr>
+        }
+</table>
+@*<button class="btn btn-info">New Product </button>*@
+<a href="/Product/AddProduct" class="btn btn-info">New Product</a>
+<button class="btn btn-danger">Product Descriptions</button>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.6.0/jq-3.6.0/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+@*navbar geçişler*@
+
+
+
